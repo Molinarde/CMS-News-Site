@@ -5,7 +5,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.DependencyInjection;
+using NewsProject.Models;
 
 namespace NewsProject
 {
@@ -16,6 +18,7 @@ namespace NewsProject
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddTransient<IRepository, NewsRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -24,7 +27,15 @@ namespace NewsProject
             app.UseDeveloperExceptionPage();
             app.UseStatusCodePages();
             app.UseStaticFiles();
-            app.UseMvcWithDefaultRoute();
+
+            app.UseMvc(routes => 
+            {
+                routes.MapRoute(
+                    name: null,
+                    template: "{controller}/{action}/{category?}",
+                    defaults: new { controller = "Home", action = "List"});
+            });
+            CRUD.AddFirstData();
         }
     }
 }

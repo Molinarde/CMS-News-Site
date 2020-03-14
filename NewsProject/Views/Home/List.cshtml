@@ -1,0 +1,17 @@
+﻿<div class="row mt-5 mb-3">
+    @foreach (NewsProject.Models.News item in Model)
+    {
+        <div class="col-md-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="@item.Img" class="card-img-top" alt="...">
+                    <h1>
+                        @item.Heading
+                    </h1>
+                    <div class="card-body">
+                        <p class="card-text">@item.ShortDescription</p>
+                    </div>
+                    
+                </div>
+        </div>
+                }
+    </div>

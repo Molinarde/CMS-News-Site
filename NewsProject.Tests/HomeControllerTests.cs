@@ -7,18 +7,14 @@ using Xunit;
 
 namespace NewsProject.Tests
 {
-    class HomeControllerTests
+    public class HomeControllerTests
     {
         [Fact]
         public void IndexxViewDataMessage()
         {
             //Arrage
-            HomeController controller = new HomeController();
 
             //act
-            ViewResult result = controller.Index() as ViewResult;
-
-            
         }
     }
 }

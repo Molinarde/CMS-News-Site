@@ -20,3 +20,7 @@ C:\Users\79308\source\repos\NewsProject\NewsProject\obj\Debug\netcoreapp2.1\Razo
 C:\Users\79308\source\repos\NewsProject\NewsProject\obj\Debug\netcoreapp2.1\NewsProject.RazorTargetAssemblyInfo.cs
 C:\Users\79308\source\repos\NewsProject\NewsProject\obj\Debug\netcoreapp2.1\NewsProject.Views.pdb
 C:\Users\79308\source\repos\NewsProject\NewsProject\obj\Debug\netcoreapp2.1\NewsProject.csproj.CopyComplete
+C:\Users\79308\source\repos\NewsProject\NewsProject\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\79308\source\repos\NewsProject\NewsProject\obj\Debug\netcoreapp2.1\Razor\Views\Home\List.cshtml.g.cs
+C:\Users\79308\source\repos\NewsProject\NewsProject\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\79308\source\repos\NewsProject\NewsProject\obj\Debug\netcoreapp2.1\NewsProject.csprojAssemblyReference.cache

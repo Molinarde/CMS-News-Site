@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using NewsProject.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,11 +9,19 @@ namespace NewsProject.Controllers
 {
     public class HomeController : Controller
     {
-
-        public ViewResult Index()
+        IRepository repository;
+        public HomeController(IRepository repository)
         {
-            return View();
+            this.repository = repository;
+
         }
 
+
+        public ViewResult List(string category)
+        {
+            var view = repository.News()
+                 .Where(p => category == null || p.Category == category);
+            return View(view);
+        }
     }
 }
